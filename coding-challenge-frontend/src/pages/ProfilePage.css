@@ -1,0 +1,277 @@
+/* Variables for theming (if you have a global style file, define them there) */
+:root {
+  --primary-blue: #007bff;
+  --card-background: #ffffff;
+  --text-dark: #333;
+  --text-light: #6c757d;
+  --border-color: #e9ecef;
+  --border-color-light: #f8f9fa;
+  --hover-blue: #0056b3;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.profile-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--primary-blue);
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-blue);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.profile-card {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--shadow-light);
+  padding: 2.5rem;
+  max-width: 700px; /* Slightly wider for better content display */
+  margin: 2rem auto 3rem;
+  border: 1px solid var(--primary-blue);
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px var(--shadow-medium);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+
+.profile-pic {
+  width: 150px; /* Slightly larger profile picture */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary-blue); /* Thicker border */
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+.profile-header h2 {
+  color: var(--primary-blue);
+  margin: 0.8rem 0 0.5rem;
+  font-size: 2.8rem; /* Larger name */
+  font-weight: 700;
+}
+
+.profile-header .reg-number {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.profile-details {
+  margin-bottom: 2.5rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px dashed var(--border-color);
+  font-size: 1.15rem; /* Larger text */
+  color: var(--text-dark);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item strong {
+  color: var(--primary-blue);
+  min-width: 180px; /* Adjust for alignment */
+  font-weight: 600;
+}
+
+.detail-item span,
+.detail-item p {
+  text-align: right;
+  flex-grow: 1;
+  color: #555;
+}
+
+.streak {
+  font-weight: bold;
+  color: #28a745; /* Green for streak */
+  font-size: 1.2rem;
+}
+
+.bio-section {
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.bio-section p {
+  margin-top: 0.8rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: left;
+  font-style: italic;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.edit-profile-btn {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  background-color: var(--primary-blue);
+  color: white;
+  margin-top: 1.5rem;
+}
+
+.edit-profile-btn:hover {
+  background-color: var(--hover-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Charts Section Styling */
+.charts-section {
+  margin-top: 4rem;
+}
+
+.chart-card {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--shadow-light);
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.chart-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px var(--shadow-medium);
+}
+
+.chart-title {
+  text-align: center;
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Two columns, responsive */
+  gap: 2.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .profile-card {
+    padding: 1.5rem;
+  }
+
+  .profile-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .profile-header .reg-number {
+    font-size: 1rem;
+  }
+
+  .detail-item {
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .detail-item strong {
+    min-width: unset;
+    margin-bottom: 0.3rem;
+  }
+
+  .detail-item span,
+  .detail-item p {
+    text-align: left;
+  }
+
+  .edit-profile-btn {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .chart-title {
+    font-size: 1.5rem;
+  }
+
+  .chart-grid {
+    grid-template-columns: 1fr; /* Stack charts on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}

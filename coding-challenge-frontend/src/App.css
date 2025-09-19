@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary-color: #2563eb;
+  --hover-color: #1d4ed8;
+  --background-color: #f8fafc;
+  --card-background: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.navbar {
+  background-color: var(--card-background);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.streak-counter {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.streak-counter:hover {
+  transform: translateY(-2px);
+}
+
+.streak-counter span {
+  font-size: 1.2rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.welcome-section {
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+  margin-bottom: 4rem;
+}
+
+.welcome-heading {
+  font-size: 5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.welcome-description {
+  font-size: 2.2rem;
+  color: var(--text-secondary);
+  max-width: 1000px;
+  line-height: 1.4;
+}
+
+.nav-grid {
+  display: flex;
+  gap: 2.5rem;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  background-color: var(--card-background);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: var(--text-primary);
+  width: 300px;
+}
+
+.nav-item svg {
+  width: 3.75rem;
+  height: 3.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.nav-item span {
+  font-weight: 500;
+  font-size: 1.65rem;
+}
+
+.nav-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.nav-item span {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
