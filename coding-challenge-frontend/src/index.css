@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5; /* Light grey background */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Add some global styling for our blue theme */
+:root {
+  --primary-blue: #007bff; /* Main blue color */
+  --light-blue: #e6f2ff; /* Lighter blue for backgrounds */
+  --text-dark: #333;
+  --text-light: #fff;
+  --border-color: #dee2e6;
+  --card-background: #fff;
+}
